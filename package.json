@@ -1,0 +1,49 @@
+{
+  "name": "designaroni-strapi",
+  "description": "A Strapi Headless CMS Application",
+  "author": {
+    "name": "Ian Roberts"
+  },
+  "license": "MIT",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designaroni/designaroni-strapi.git"
+  },
+  "private": true,
+  "scripts": {
+    "local": "yarn develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "commit": "git-cz",
+    "strapi": "strapi",
+    "upgradeStrapi": "yarn upgrade @strapi/strapi@latest && yarn upgrade @strapi/plugin-users-permissions@latest && yarn upgrade @strapi/plugin-i18n@latest && yarn upgrade @strapi/plugin-graphql@latest"
+  },
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.3.3",
+    "@strapi/plugin-i18n": "^4.3.3",
+    "@strapi/plugin-users-permissions": "^4.3.3",
+    "@strapi/provider-upload-aws-s3": "^4.5.3",
+    "@strapi/strapi": "^4.3.3",
+    "better-sqlite3": "7.6.2",
+    "pg": "^8.7.3",
+    "strapi-plugin-vercel-deploy": "^1.4.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@commitlint/cz-commitlint": "^17.3.0",
+    "@semantic-release/git": "^10.0.1",
+    "commitizen": "^4.2.6",
+    "husky": "^8.0.2",
+    "semantic-release": "^19.0.5"
+  },
+  "strapi": {
+    "uuid": "f0330bc2-298b-4e30-93bd-5b673f2f79fa"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  }
+}
